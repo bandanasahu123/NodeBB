@@ -10,7 +10,15 @@ COPY install/package.json /usr/src/app/package.json
 
 RUN npm install --only=prod && \
     npm cache clean --force
-    
+
+COPY local_modules /usr/src/app/node_modules/
+RUN cd node_modules/nodebb-plugin-sunbird-oidc &&  \
+    npm install && \
+    cd ..&& \
+    cd sunbird-telemery && \
+    npm install && \
+    cd ..
+
 COPY . /usr/src/app
 
 ENV NODE_ENV=production \
