@@ -11,11 +11,12 @@ COPY install/package.json /usr/src/app/package.json
 RUN npm install --only=prod && \
     npm cache clean --force
 
-COPY local_modules /usr/src/app/node_modules/
-RUN cd node_modules/nodebb-plugin-sunbird-oidc &&  \
+COPY local_modules/ /usr/src/app/node_modules/
+
+RUN cd /usr/src/app/node_modules/nodebb-plugin-sunbird-oidc-master &&  \
     npm install && \
-    cd ..&& \
-    cd sunbird-telemery && \
+    cd .. && \
+    cd sunbird-telemetry && \
     npm install && \
     cd ..
 
