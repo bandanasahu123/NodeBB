@@ -1,0 +1,41 @@
+{
+  "id": "nodebb-plugin-sunbird-oidc",
+  "name": "Sunbird SSO Plugin for NodeBB",
+  "description": "Authenticate to Sunbird identity provider.",
+  "url": "https://github.com/vrayulu/nodebb-plugin-sunbird-oidc",
+  "library": "./library.js",
+  "templates": "templates",
+  "hooks": [
+    {
+      "hook": "static:app.load",
+      "method": "init"
+    },
+    {
+      "hook": "static:user.delete",
+      "method": "deleteUserData"
+    },
+    {
+      "hook": "filter:user.whitelistFields",
+      "method": "whitelistFields"
+    },
+    {
+      "hook": "filter:auth.init",
+      "method": "bindStrategy"
+    },
+    {
+      "hook": "filter:admin.header.build",
+      "method": "bindMenuOption"
+    },
+    {
+      "hook": "action:settings.set",
+      "method": "bindStrategy"
+    },
+    {
+      "hook": "filter:user.logout",
+      "method": "redirectLogout"
+    }
+  ],
+  "acpScripts": [
+    "static/lib/admin.js"
+  ]
+}

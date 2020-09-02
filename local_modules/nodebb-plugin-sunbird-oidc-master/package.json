@@ -1,0 +1,56 @@
+{
+  "name": "nodebb-plugin-sunbird-oidc",
+  "version": "1.0.0",
+  "description": "Authenticate to Sunbird identity provider.",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vrayulu/nodebb-plugin-sunbird-oidc"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "sunbird",
+    "oauth",
+    "oauth2",
+    "sso",
+    "single sign on",
+    "login",
+    "registration"
+  ],
+  "license": "BSD-2-Clause",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "async": "^2",
+    "passport-custom": "^1.1.1",
+    "request": "2.81.0",
+    "uid2": "0.0.x",
+    "request-promise": "^4.2.6"
+  },
+  "nbbpm": {
+    "compatibility": "^1.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-angular": "^8.3.4",
+    "@types/async": "^3.0.8",
+    "@types/express": "^4.17.3",
+    "@types/passport-oauth2": "^1.4.8",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {}
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "scripts": {}
+}

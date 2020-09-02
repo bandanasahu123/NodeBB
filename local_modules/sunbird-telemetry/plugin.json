@@ -1,0 +1,14 @@
+{
+  "id": "nodebb-plugin-telemetry-plugin",
+  "name": "My Plugin ror nodebb",
+  "description": "My Plugin for nodebb",
+  "url": "https://github.com/sathish-manickam/nodebb-plugin-myplugin.git",
+	"library": "library.js",
+	"hooks": [
+		{ "hook": "static:app.load", "method": "load" }
+	],
+	"templates": "./public/templates",
+	"staticDirs": {
+		"public": "public"
+	}
+}

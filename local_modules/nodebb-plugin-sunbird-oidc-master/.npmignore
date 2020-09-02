@@ -1,0 +1,13 @@
+sftp-config.json
+node_modules/
+nodebb/
+build/
+.idea/
+docker-compose.yml
+.env
+tsconfig.json
+commitlint.config.json
+.gitattributes
+.eslintrc
+*.ts
+readme-images

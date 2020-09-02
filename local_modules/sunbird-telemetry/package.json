@@ -1,0 +1,15 @@
+{
+  "name": "nodebb-plugin-telemetry-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "my-plugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bandana sahu <bandana.tarento@gmail.com> (http://www.magicmikemovie.com)",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "uuid": "^8.3.0"
+  }
+}
