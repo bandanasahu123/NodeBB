@@ -13,10 +13,10 @@ RUN npm install --only=prod && \
 
 COPY local_modules/ /usr/src/app/node_modules/
 
-RUN cd /usr/src/app/node_modules/nodebb-plugin-sunbird-oidc-master &&  \
+RUN cd /usr/src/app/node_modules/nodebb-plugin-sunbird-oidc &&  \
     npm install && \
     cd .. && \
-    cd sunbird-telemetry && \
+    cd nodebb-plugin-telemetry-plugin && \
     npm install && \
     cd ..
 
