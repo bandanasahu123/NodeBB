@@ -13,12 +13,10 @@ RUN npm install --only=prod && \
 
 COPY local_modules/ /usr/src/app/node_modules/
 
-RUN cd /usr/src/app/node_modules/nodebb-plugin-sunbird-oidc &&  \
-    npm install && \
-    cd .. && \
-    cd nodebb-plugin-telemetry-plugin && \
-    npm install && \
-    cd ..
+RUN cd /usr/src/app/node_modules &&  \
+    git clone https://github.com/vrayulu/nodebb-plugin-sunbird-oidc.git && \
+    cd nodebb-plugin-sunbird-oidc && \
+    npm install 
 
 COPY . /usr/src/app
 
