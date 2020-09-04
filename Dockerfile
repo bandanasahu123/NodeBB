@@ -11,7 +11,6 @@ COPY install/package.json /usr/src/app/package.json
 RUN npm install --only=prod && \
     npm cache clean --force
 
-COPY local_modules/ /usr/src/app/node_modules/
 
 RUN cd /usr/src/app/node_modules &&  \
     git clone https://github.com/vrayulu/nodebb-plugin-sunbird-oidc.git && \
