@@ -15,7 +15,7 @@ RUN mkdir local_packages && \
     cd local_packages && \
     git clone https://github.com/vrayulu/nodebb-plugin-sunbird-oidc.git && \
     cd .. && \
-    npm install local_packages/nodebb-plugin-sunbird-oidc
+    npm install local_modules/nodebb-plugin-sunbird-oidc
 
 
 
