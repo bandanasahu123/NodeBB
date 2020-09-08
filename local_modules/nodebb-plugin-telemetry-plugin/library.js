@@ -4,7 +4,7 @@ const axios = require('axios')
 const { v4: uuidv4 } = require('uuid')
 
 Plugin.load = function (params, callback) {
-  console.log('-----------------', params, '-------------------------')
+  console.log('-----------------', params, '-------------------------');
   var router = params.router
   var middleware = params.middleware
 
